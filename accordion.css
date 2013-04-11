@@ -1,0 +1,79 @@
+﻿.d2l-accordion {
+	border-radius: 3px;
+	border: 1px solid #dddddd;
+}
+
+.d2l-accordion-header {
+	background: #fafafa; /* Old browsers */
+	background: -moz-linear-gradient(top,  #fafafa 0%, #ededed 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fafafa), color-stop(100%,#ededed)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #fafafa 0%,#ededed 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #fafafa 0%,#ededed 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #fafafa 0%,#ededed 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #fafafa 0%,#ededed 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+	border-top: 1px solid #dddddd;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	cursor: pointer;
+}
+
+.d2l-accordion-header:hover,
+.d2l-accordion-header-active {
+	background: #fafafa; /* Old browsers */
+	background: -moz-linear-gradient(top,  #fafafa 0%, #fdfdfd 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fafafa), color-stop(100%,#fdfdfd)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #fafafa 0%,#fdfdfd 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #fafafa 0%,#fdfdfd 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #fafafa 0%,#fdfdfd 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #fafafa 0%,#fdfdfd 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#fdfdfd',GradientType=0 ); /* IE6-9 */
+}
+
+.d2l-accordion-content {
+	overflow: auto;
+	border-top: 1px solid #dddddd;
+	background-color: #fcfcfc;
+	padding: 10px;
+	-webkit-box-shadow: 0px 3px 3px -3px rgba(0,0,0,0.5) inset, 0px -3px 3px -3px rgba(0,0,0,0.5) inset;
+	-moz-box-shadow: 0px 3px 3px -3px rgba(0,0,0,0.5) inset, 0px -3px 3px -3px rgba(0,0,0,0.5) inset;
+	box-shadow: 0px 3px 3px -3px rgba(0,0,0,0.5) inset, 0px -3px 3px -3px rgba(0,0,0,0.5) inset;
+	display: none;
+}
+
+.d2l-accordion-header:first-child {
+	border-top-width: 0px;
+}
+
+.d2l-accordion-header.d2l-accordion-panel-expanded {
+	background: #ebf1f4; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ebf1f4 0%, #d7e3e9 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ebf1f4), color-stop(100%,#d7e3e9)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ebf1f4 0%,#d7e3e9 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ebf1f4 0%,#d7e3e9 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ebf1f4 0%,#d7e3e9 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ebf1f4 0%,#d7e3e9 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf1f4', endColorstr='#d7e3e9',GradientType=0 ); /* IE6-9 */
+}
+
+.d2l-accordion-header.d2l-accordion-panel-expanded:hover,
+.d2l-accordion-header.d2l-accordion-panel-expanded.d2l-accordion-header-active {
+	background: #f2f7fa; /* Old browsers */
+	background: -moz-linear-gradient(top,  #f2f7fa 0%, #e6eff4 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2f7fa), color-stop(100%,#e6eff4)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #f2f7fa 0%,#e6eff4 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #f2f7fa 0%,#e6eff4 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #f2f7fa 0%,#e6eff4 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #f2f7fa 0%,#e6eff4 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f7fa', endColorstr='#e6eff4',GradientType=0 ); /* IE6-9 */
+}
+
+.d2l-accordion-header-disabled,
+.d2l-accordion-header-disabled:hover {
+	background: #f6f6f6;
+	filter: alpha(opacity=60);
+	opacity: 0.6;
+	cursor: default;
+}
