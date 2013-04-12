@@ -48,12 +48,10 @@
 				return;
 			}
 
-			var accordionNode = this._getAccordionNodeByChild( $header );
-
-			$( accordionNode ).trigger( 
-				'collapsePanel', { 
-					header: $header.get( 0 )
-				} 
+			$( this.element ).trigger(
+				'collapsePanel', {
+				    header: $header.get(0)
+				}
 			);
 
 			$header.attr( 'aria-expanded', 'false' )
@@ -76,8 +74,7 @@
 
 		_expandPanel: function( $header ) {
 
-			var accordionNode = this._getAccordionNodeByChild( $header );
-			var $accordion = $( accordionNode );
+			var $accordion = $( this.element );
 
 			if ( this._getDisplayMode( $accordion ) === 'accordion' ) {
 				$accordion.accordion( 'collapseAll' );
@@ -106,14 +103,6 @@
 					height: [ 'show', 'swing' ]
 				}, 250 );
 
-		},
-
-		_getAccordionNodeByChild: function( $node ) {
-			var nodes = $node.closest( '.d2l-accordion' );
-			if ( nodes != null && nodes.length > 0 ) {
-				return nodes[0];
-			}
-			return null;
 		},
 
 		_getDisplayMode: function( $node ) {
