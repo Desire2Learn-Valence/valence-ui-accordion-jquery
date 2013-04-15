@@ -50,7 +50,7 @@
 
 			$( this.element ).trigger(
 				'collapsePanel', {
-				    header: $header.get(0)
+					header: $header.get(0)
 				}
 			);
 
@@ -60,7 +60,7 @@
 			var contentId = $header.attr( 'data-content-id' );
 
 			var contentNode = document.getElementById( contentId );
-			if ( contentNode == null ) {
+			if ( contentNode === null ) {
 				return;
 			}
 
@@ -93,7 +93,7 @@
 			var contentId = $header.attr( 'data-content-id' );
 
 			var contentNode = document.getElementById( contentId );
-			if ( contentNode == null ) {
+			if ( contentNode === null ) {
 				return;
 			}
 
@@ -112,12 +112,12 @@
 		_initializePanel: function( $accordion, $header, isFocusable ) {
 
 			var contentId = $header.attr( 'data-content-id' );
-			if ( contentId == null ) {
+			if ( contentId === null ) {
 				return;
 			}
 
 			var contentNode = document.getElementById( contentId );
-			if ( contentNode == null ) {
+			if ( contentNode === null ) {
 				return;
 			}
 
