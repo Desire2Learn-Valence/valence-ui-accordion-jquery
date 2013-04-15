@@ -212,8 +212,7 @@
 			$content
 				.attr( 'role', 'tabpanel' )
 				.attr( 'aria-labelledby', labelledById )
-				.attr( 'aria-hidden', 'true' )
-				.hide();
+				.attr( 'aria-hidden', 'true' );
 
 			if ( isExpanded ) {
 
