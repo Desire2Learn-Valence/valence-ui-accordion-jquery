@@ -2,12 +2,13 @@
 
 .d2l-accordion {
 	.border-radius( 3px );
-	border: 1px solid #dddddd;
+	border: 1px solid #cfcfcf;
 }
 
 .d2l-accordion-header {
 	.gradient-vertical( #fafafa, #ededed );
-	border-top: 1px solid #dddddd;
+	.box-shadow-custom( ~'0 1px 0 0 rgba(255,255,255,0.8) inset' );
+	border-top: 1px solid #cfcfcf;
 	padding: 10px;
 	cursor: pointer;
 }
@@ -20,13 +21,13 @@
 
 .d2l-accordion-header:hover,
 .d2l-accordion-header-active {
-	.gradient-vertical( #fafafa, #fdfdfd );
+	.gradient-vertical( #fdfdfd, #fafafa );
 }
 
 .d2l-accordion-content {
-	.box-shadow-custom( ~'0 3px 3px -3px rgba(0,0,0,0.5) inset, 0 -3px 3px -3px rgba(0,0,0,0.5) inset' );
+	.box-shadow-custom( ~'0 5px 5px -5px rgba(0,0,0,0.1) inset, 0 -5px 5px -5px rgba(0,0,0,0.1) inset' );
 	overflow: auto;
-	border-top: 1px solid #dddddd;
+	border-top: 1px solid #cfcfcf;
 	background-color: #fcfcfc;
 	padding: 10px;
 	display: none;
@@ -37,7 +38,7 @@
 }
 
 .d2l-accordion-panel-expanded {
-	.gradient-vertical( #ebf1f4, #d7e3e9 );
+	.gradient-vertical( #f2f7fa, #e6eff4 );
 }
 
 .d2l-accordion-header-active,
