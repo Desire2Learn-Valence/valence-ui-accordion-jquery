@@ -111,17 +111,15 @@
 
 		_initializePanel: function( $accordion, $header, isFocusable ) {
 
-			var contentId = $header.attr( 'data-content-id' );
-			if ( contentId === null ) {
-				return;
-			}
-
-			var contentNode = document.getElementById( contentId );
-			if ( contentNode === null ) {
-				return;
-			}
-
 			var me = this;
+
+			var $content = me._tryGetContent( $header );
+			if ( $content === null ) {
+				return;
+			}
+
+			var contentId = $header.attr( 'data-content-id' );
+			var contentNode = $content.get( 0 );
 
 			var isExpanded = ( $header.attr( 'data-expanded' ) === 'true' );
 			var labelledById = $header.attr( 'data-content-labelledby' );
@@ -136,8 +134,6 @@
 					me._expandPanel( $header );
 				}
 			};
-
-			var $content = $( contentNode );
 
 			var isEnabled = !$content.is( ':empty' );
 
@@ -277,6 +273,38 @@
 			var $headers = $( this.element )
 				.find( '.d2l-accordion-header');
 			return $( $headers[ $headers.length - 1 ] );
+		},
+
+		_tryGetContent: function( $header ) {
+
+			var contentId = $header.attr( 'data-content-id' );
+
+			if ( contentId !== undefined ) {
+				var contentNode = document.getElementById( contentId );
+				if ( contentNode !== null ) {
+					return $( contentNode );
+				} else {
+					return null;
+				}
+			}
+
+			var $nextElement = $header.next( '.d2l-accordion-content' );
+			if ( $nextElement.length !== 0 ) {
+
+				contentId = $nextElement.attr( 'id' );
+				if ( contentId === undefined ) {
+					$nextElement.uniqueId();
+					contentId = $nextElement.attr( 'id' );
+				}
+
+				$header.attr( 'data-content-id', contentId );
+
+				return $nextElement;
+
+			}
+
+			return null;
+
 		},
 
 		_tryGetPreviousPanel: function( $header ) {
