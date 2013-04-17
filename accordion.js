@@ -125,6 +125,9 @@
 
 			var isExpanded = ( $header.attr( 'data-expanded' ) === 'true' );
 			var labelledById = $header.attr( 'data-content-labelledby' );
+			
+			var $headerContent = $header.find( '.d2l-accordion-header-content:first-child' );
+			var isHeaderInteractive = ( $headerContent.length !== 0 );
 
 			var togglePanel = function() {
 				if ( $header.hasClass( 'd2l-accordion-panel-expanded' ) ) {
@@ -144,6 +147,7 @@
 				.attr( 'aria-expanded', isExpanded )
 				.attr( 'aria-selected', isFocusable ? 'true' : 'false' )
 				.attr( 'tabindex', isFocusable ? '0' : '-1' )
+				.css( 'padding', isHeaderInteractive ? '0' : 'auto' )
 				.data( 'hasExpanded', isExpanded )
 				.removeAttr( 'data-expanded' )
 				.click( function( e ) {
@@ -155,9 +159,11 @@
 					var eventTarget = e.target;
 
 					while ( eventTarget !== $header.get( 0 ) && eventTarget !== null ) { 
-						if ( $( eventTarget ).is( ':focusable' ) ) {
+
+						if ( eventTarget === $headerContent.get( 0 ) || $( eventTarget ).is( ':focusable' ) ) {
 							return;
 						}
+
 						eventTarget = eventTarget.parentNode;
 					}
 
