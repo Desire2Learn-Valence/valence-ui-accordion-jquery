@@ -350,26 +350,11 @@
 
 	} );
 
-	console.log('add');
 	vui.addClassInitializer(
 			'd2l-accordion',
 			function( node ) {
 				$( node ).accordion();
 			}
 		);
-
-	/*
-	$( '.d2l-accordion' ).accordion();
-
-	$( document )
-		.on(
-			'vui-viewrender',
-			function( evt ) {
-				$( evt.target )
-					.find( '.d2l-accordion' )
-					.addBack( '.d2l-accordion' )
-					.accordion();
-			}
-		);*/
 
 } );
