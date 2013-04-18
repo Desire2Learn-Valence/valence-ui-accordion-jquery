@@ -52,3 +52,26 @@
 	.opacity( 0.6 );
 	cursor: default;
 }
+
+.d2l-accordion-toggle {
+	.border-radius( 3px );
+	border: 1px solid transparent;
+	background-image: url( 'img/collapsed.png' );
+	background-repeat: no-repeat;
+	position: relative;
+	float: left;
+	width: 30px;
+	height: 30px;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+.d2l-accordion-panel-expanded > .d2l-accordion-toggle {
+	background-image: url( 'img/expanded.png' );
+}
+
+.d2l-accordion-header-active > .d2l-accordion-toggle,
+.d2l-accordion-header:hover > .d2l-accordion-toggle {
+	background-color: #fafafa;
+	border-color: #cccccc;
+}

@@ -125,6 +125,7 @@
 			var labelledById = $header.attr( 'data-content-labelledby' );
 			
 			var $headerContent = $header.find( '.d2l-accordion-header-content:first-child' );
+
 			var isHeaderInteractive = ( $headerContent.length !== 0 );
 
 			var togglePanel = function() {
@@ -136,6 +137,12 @@
 			};
 
 			var isEnabled = !$content.is( ':empty' );
+
+			if ( isHeaderInteractive ) {
+				var toggle = document.createElement( 'div' );
+				toggle.className = 'd2l-accordion-toggle';
+				$header.prepend( toggle );
+			}
 
 			$header
 				.attr( 'role', 'tab' )
