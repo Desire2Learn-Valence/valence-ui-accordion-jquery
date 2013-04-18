@@ -141,6 +141,10 @@
 			if ( isHeaderInteractive ) {
 				var toggle = document.createElement( 'div' );
 				toggle.className = 'd2l-accordion-toggle';
+
+				var toggleIcon = toggle.appendChild( document.createElement( 'div' ) );
+				toggleIcon.className = 'd2l-accordion-toggle-icon';
+
 				$header.prepend( toggle );
 			}
 
