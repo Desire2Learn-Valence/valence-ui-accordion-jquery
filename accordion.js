@@ -176,11 +176,11 @@
 
 					togglePanel();
 
-				} ).focus( function( e ) {
+				} ).focus( function() {
 
 					$header.addClass( 'd2l-accordion-header-active' );
 
-				} ).blur( function( e ) {
+				} ).blur( function() {
 
 					$header.removeClass( 'd2l-accordion-header-active' );
 
@@ -191,6 +191,8 @@
 						e.preventDefault();
 						return false;
 					}
+
+					return true;
 
 				} ).keyup( function( e ) {
 
@@ -348,15 +350,26 @@
 
 	} );
 
+	console.log('add');
+	vui.addClassInitializer(
+			'd2l-accordion',
+			function( node ) {
+				$( node ).accordion();
+			}
+		);
+
+	/*
 	$( '.d2l-accordion' ).accordion();
 
 	$( document )
 		.on(
 			'vui-viewrender',
 			function( evt ) {
-				$( evt.target ).find( '.d2l-accordion' ).accordion();
-				// TODO: handle case where evt.target needs to be applied
+				$( evt.target )
+					.find( '.d2l-accordion' )
+					.addBack( '.d2l-accordion' )
+					.accordion();
 			}
-		);
+		);*/
 
 } );
