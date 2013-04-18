@@ -339,8 +339,9 @@
 
 	} );
 
+	console.log('add');
 	vui.addClassInitializer(
-			'.d2l-accordion',
+			'd2l-accordion',
 			function( node ) {
 				$( node ).accordion();
 			}
