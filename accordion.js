@@ -57,6 +57,8 @@
 			$header.attr( 'aria-expanded', 'false' )
 				.removeClass( 'd2l-accordion-panel-expanded' );
 
+			this._updateIcon( $header, false );
+
 			var contentId = $header.attr( 'data-content-id' );
 
 			var contentNode = document.getElementById( contentId );
@@ -89,6 +91,8 @@
 
 			$header.attr( 'aria-expanded', 'true' )
 				.addClass( 'd2l-accordion-panel-expanded' );
+
+			this._updateIcon( $header, true );
 
 			var contentId = $header.attr( 'data-content-id' );
 
@@ -143,7 +147,11 @@
 				toggle.className = 'd2l-accordion-toggle';
 
 				var toggleIcon = toggle.appendChild( document.createElement( 'div' ) );
-				toggleIcon.className = 'd2l-accordion-toggle-icon';
+				if ( isExpanded ) {
+					toggleIcon.className = 'd2l-accordion-toggle-icon d2l-icon-expanded';
+				} else {
+					toggleIcon.className = 'd2l-accordion-toggle-icon d2l-icon-collapsed';
+				}
 
 				$header.prepend( toggle );
 			}
@@ -344,6 +352,21 @@
 				return $nextElement;
 			} else {
 				return this._tryGetNextPanel( $nextElement );
+			}
+
+		},
+
+		_updateIcon: function( $header, isExpanded ) {
+
+			var toggleIcon = $header.find( '.d2l-accordion-toggle-icon' );
+			if ( toggleIcon.length > 0 ) {
+				if ( isExpanded ) {
+					toggleIcon.addClass( 'd2l-icon-expanded' );
+					toggleIcon.removeClass( 'd2l-icon-collapsed' );
+				} else {
+					toggleIcon.addClass( 'd2l-icon-collapsed' );
+					toggleIcon.removeClass( 'd2l-icon-expanded' );
+				}
 			}
 
 		}
