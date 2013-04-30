@@ -109,7 +109,8 @@
 			);
 
 			$header.attr( 'aria-expanded', 'true' )
-				.addClass( 'd2l-accordion-panel-expanded' );
+				.addClass( 'd2l-accordion-panel-expanded' )
+				.data( 'hasExpanded', true );
 
 			this._updateIcon( $header, true );
 
