@@ -9,11 +9,18 @@
 
 			var $accordion = $( this.element );
 
+			var displayMode = $accordion.attr( 'data-display-mode' );
+			if ( displayMode !== 'stacked' ) {
+				displayMode = 'accordion';
+			}
+
+			this.option( 'displayMode', displayMode );
+
 			$accordion
 				.attr( 'role', 'tablist' )
 				.attr( 
 					'aria-multiselectable', 
-					this._getDisplayMode( $accordion ) !== 'accordion' 
+					displayMode !== 'accordion' 
 				);
 
 			$.each( 
@@ -27,6 +34,18 @@
 				}
 			);
 
+		},
+
+		_setOption: function( key, value ) {
+			if ( key === 'displayMode' ) {
+				if ( value === 'stacked' ) {
+					value = 'stacked';
+				} else {
+					value = 'accordion';
+				}
+				$( this.element ).attr( 'data-display-mode', value );
+			}
+			$.Widget.prototype._setOption.apply( this, arguments );
 		},
 
 		collapseAll: function() {
@@ -78,7 +97,7 @@
 
 			var $accordion = $( this.element );
 
-			if ( this._getDisplayMode( $accordion ) === 'accordion' ) {
+			if ( this.option( 'displayMode' ) === 'accordion' ) {
 				$accordion.accordion( 'collapseAll' );
 			}
 
@@ -107,10 +126,6 @@
 					height: [ 'show', 'swing' ]
 				}, 250 );
 
-		},
-
-		_getDisplayMode: function( $node ) {
-			return $node.attr( 'data-display-mode' );
 		},
 
 		_initializePanel: function( $accordion, $header, isFocusable ) {
@@ -239,7 +254,7 @@
 
 			if ( isExpanded ) {
 
-				if ( this._getDisplayMode( $accordion ) === 'accordion' ) {
+				if ( this.option( 'displayMode' ) === 'accordion' ) {
 					$.each( 
 						$accordion.find( '.d2l-accordion-panel-expanded' ),
 						function( index, panelNode ) {
