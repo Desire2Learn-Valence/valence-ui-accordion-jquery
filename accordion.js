@@ -166,7 +166,7 @@
 				if ( isExpanded ) {
 					toggleIcon.className = 'd2l-accordion-toggle-icon d2l_icon_expanded';
 				} else {
-					toggleIcon.className = 'd2l-accordion-toggle-icon d2l_icon_collapsed';
+					toggleIcon.className = 'd2l-accordion-toggle-icon d2l-icon-collapsed';
 				}
 
 				$header.prepend( toggle );
@@ -377,11 +377,11 @@
 			var toggleIcon = $header.find( '.d2l-accordion-toggle-icon' );
 			if ( toggleIcon.length > 0 ) {
 				if ( isExpanded ) {
-					toggleIcon.addClass( 'd2l_icon_expanded' );
+					toggleIcon.addClass( 'd2l-icon-expanded' );
 					toggleIcon.removeClass( 'd2l_icon_collapsed' );
 				} else {
-					toggleIcon.addClass( 'd2l_icon_collapsed' );
-					toggleIcon.removeClass( 'd2l_icon_expanded' );
+					toggleIcon.addClass( 'd2l-icon-collapsed' );
+					toggleIcon.removeClass( 'd2l-icon-expanded' );
 				}
 			}
 
