@@ -1,5 +1,5 @@
 ﻿$( function() { 
-	$.widget( "d2l.accordion", { 
+	$.widget( "vui.accordion", { 
 
 		options: {},
 
@@ -24,7 +24,7 @@
 				);
 
 			$.each( 
-				$accordion.find( '.d2l-accordion-header' ),
+				$accordion.find( '.vui-accordion-header' ),
 				function( index, headerNode ) {
 					me._initializePanel( 
 						$accordion, 
@@ -53,7 +53,7 @@
 			var me = this;
 
 			$.each( 
-				$( this.element ).find( '.d2l-accordion-header' ),
+				$( this.element ).find( '.vui-accordion-header' ),
 				function( index, headerNode ) {
 					me._collapsePanel( $( headerNode ) );
 				}
@@ -63,7 +63,7 @@
 
 		_collapsePanel: function( $header ) {
 
-			if ( !$header.hasClass( 'd2l-accordion-panel-expanded' ) ) {
+			if ( !$header.hasClass( 'vui-accordion-panel-expanded' ) ) {
 				return;
 			}
 
@@ -74,7 +74,7 @@
 			);
 
 			$header.attr( 'aria-expanded', 'false' )
-				.removeClass( 'd2l-accordion-panel-expanded' );
+				.removeClass( 'vui-accordion-panel-expanded' );
 
 			this._updateIcon( $header, false );
 
@@ -109,7 +109,7 @@
 			);
 
 			$header.attr( 'aria-expanded', 'true' )
-				.addClass( 'd2l-accordion-panel-expanded' )
+				.addClass( 'vui-accordion-panel-expanded' )
 				.data( 'hasExpanded', true );
 
 			this._updateIcon( $header, true );
@@ -144,12 +144,12 @@
 			var isExpanded = ( $header.attr( 'data-expanded' ) === 'true' );
 			var labelledById = $header.attr( 'data-content-labelledby' );
 			
-			var $headerContent = $header.find( '.d2l-accordion-header-content:first-child' );
+			var $headerContent = $header.find( '.vui-accordion-header-content:first-child' );
 
 			var isHeaderInteractive = ( $headerContent.length !== 0 );
 
 			var togglePanel = function() {
-				if ( $header.hasClass( 'd2l-accordion-panel-expanded' ) ) {
+				if ( $header.hasClass( 'vui-accordion-panel-expanded' ) ) {
 					me._collapsePanel( $header );
 				} else {
 					me._expandPanel( $header );
@@ -160,13 +160,13 @@
 
 			if ( isHeaderInteractive ) {
 				var toggle = document.createElement( 'div' );
-				toggle.className = 'd2l-accordion-toggle';
+				toggle.className = 'vui-accordion-toggle';
 
 				var toggleIcon = toggle.appendChild( document.createElement( 'div' ) );
 				if ( isExpanded ) {
-					toggleIcon.className = 'd2l-accordion-toggle-icon d2l_icon_expanded';
+					toggleIcon.className = 'vui-accordion-toggle-icon vui-icon-expanded';
 				} else {
-					toggleIcon.className = 'd2l-accordion-toggle-icon d2l-icon-collapsed';
+					toggleIcon.className = 'vui-accordion-toggle-icon vui-icon-collapsed';
 				}
 
 				$header.prepend( toggle );
@@ -202,11 +202,11 @@
 
 				} ).focus( function() {
 
-					$header.addClass( 'd2l-accordion-header-active' );
+					$header.addClass( 'vui-accordion-header-active' );
 
 				} ).blur( function() {
 
-					$header.removeClass( 'd2l-accordion-header-active' );
+					$header.removeClass( 'vui-accordion-header-active' );
 
 				} ).keydown( function( e ) {
 
@@ -245,7 +245,7 @@
 			if ( !isEnabled ) {
 				$header
 					.attr( 'aria-disabled', 'true' )
-					.addClass( 'd2l-accordion-header-disabled' );
+					.addClass( 'vui-accordion-header-disabled' );
 			}
 
 			$content
@@ -257,14 +257,14 @@
 
 				if ( this.option( 'displayMode' ) === 'accordion' ) {
 					$.each( 
-						$accordion.find( '.d2l-accordion-panel-expanded' ),
+						$accordion.find( '.vui-accordion-panel-expanded' ),
 						function( index, panelNode ) {
 							me._collapsePanel( $( panelNode ) );
 						}
 					);
 				}
 
-				$header.addClass( 'd2l-accordion-panel-expanded' );
+				$header.addClass( 'vui-accordion-panel-expanded' );
 
 				setTimeout( function() {
 					$accordion.trigger( 
@@ -302,13 +302,13 @@
 
 		_getFirstPanelHeader: function() {
 			var $headers = $( this.element )
-				.find( '.d2l-accordion-header');
+				.find( '.vui-accordion-header');
 			return $( $headers[ 0 ] );
 		},
 
 		_getLastPanelHeader: function() {
 			var $headers = $( this.element )
-				.find( '.d2l-accordion-header');
+				.find( '.vui-accordion-header');
 			return $( $headers[ $headers.length - 1 ] );
 		},
 
@@ -325,7 +325,7 @@
 				}
 			}
 
-			var $nextElement = $header.next( '.d2l-accordion-content' );
+			var $nextElement = $header.next( '.vui-accordion-content' );
 			if ( $nextElement.length !== 0 ) {
 
 				contentId = $nextElement.attr( 'id' );
@@ -350,7 +350,7 @@
 
 			if ( $previousElement.length === 0 ) {
 				return this._getLastPanelHeader();
-			} else if ( $previousElement.hasClass( 'd2l-accordion-header' ) ) {
+			} else if ( $previousElement.hasClass( 'vui-accordion-header' ) ) {
 				return $previousElement;
 			} else {
 				return this._tryGetPreviousPanel( $previousElement );
@@ -364,7 +364,7 @@
 
 			if ( $nextElement.length === 0 ) {
 				return this._getFirstPanelHeader();
-			} else if ( $nextElement.hasClass( 'd2l-accordion-header' ) ) {
+			} else if ( $nextElement.hasClass( 'vui-accordion-header' ) ) {
 				return $nextElement;
 			} else {
 				return this._tryGetNextPanel( $nextElement );
@@ -374,14 +374,14 @@
 
 		_updateIcon: function( $header, isExpanded ) {
 
-			var toggleIcon = $header.find( '.d2l-accordion-toggle-icon' );
+			var toggleIcon = $header.find( '.vui-accordion-toggle-icon' );
 			if ( toggleIcon.length > 0 ) {
 				if ( isExpanded ) {
-					toggleIcon.addClass( 'd2l-icon-expanded' );
-					toggleIcon.removeClass( 'd2l_icon_collapsed' );
+					toggleIcon.addClass( 'vui-icon-expanded' );
+					toggleIcon.removeClass( 'vui-icon-collapsed' );
 				} else {
-					toggleIcon.addClass( 'd2l-icon-collapsed' );
-					toggleIcon.removeClass( 'd2l-icon-expanded' );
+					toggleIcon.addClass( 'vui-icon-collapsed' );
+					toggleIcon.removeClass( 'vui-icon-expanded' );
 				}
 			}
 
@@ -390,7 +390,7 @@
 	} );
 
 	vui.addClassInitializer(
-			'd2l-accordion',
+			'vui-accordion',
 			function( node ) {
 				$( node ).accordion();
 			}
