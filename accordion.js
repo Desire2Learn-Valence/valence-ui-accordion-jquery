@@ -211,7 +211,7 @@
 				} ).keydown( function( e ) {
 
 					// prevent scrolling page when arrow keys, home, or end are pressed
-					if ( e.keyCode >=35 && e.keyCode <=40 ) {
+					if ( e.keyCode >=35 && e.keyCode <=40 || e.keyCode==32 ) {
 						e.preventDefault();
 						return false;
 					}
