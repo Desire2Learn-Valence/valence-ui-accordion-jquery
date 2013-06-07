@@ -87,9 +87,7 @@
 
 			$( contentNode )
 				.attr( 'aria-hidden', 'true' )
-				.animate( {
-					height: [ 'hide', 'swing' ]
-				}, 250 );
+				.slideUp(250,'swing');
 
 		},
 
@@ -123,9 +121,7 @@
 
 			$( contentNode )
 				.attr( 'aria-hidden', 'false' )
-				.animate( {
-					height: [ 'show', 'swing' ]
-				}, 250 );
+				.slideDown(250,'swing');
 
 		},
 
