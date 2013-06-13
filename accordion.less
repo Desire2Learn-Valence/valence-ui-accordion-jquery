@@ -24,6 +24,11 @@
 	.gradient-vertical( #fcfcfc, #f8f8f8 );
 }
 
+.vui-accordion-header-interactive:hover,
+.vui-accordion-header-active.vui-accordion-header-interactive {
+	.gradient-vertical( #fafafa, #ededed );
+}
+
 .vui-accordion-content {
 	.box-shadow-custom( ~'0 5px 5px -5px rgba(0,0,0,0.1) inset, 0 -5px 5px -5px rgba(0,0,0,0.1) inset' );
 	overflow: auto;
@@ -44,6 +49,11 @@
 .vui-accordion-header-active.vui-accordion-panel-expanded,
 .vui-accordion-panel-expanded:hover {
 	.gradient-vertical( #f7f9f9, #eff3f5 );
+}
+
+.vui-accordion-panel-expanded.vui-accordion-header-interactive:hover,
+.vui-accordion-header-active.vui-accordion-panel-expanded.vui-accordion-header-interactive {
+	.gradient-vertical( #ebf1f4, #d7e3e9 );
 }
 
 .vui-accordion-header-disabled,

@@ -155,6 +155,9 @@
 			var isEnabled = !$content.is( ':empty' );
 
 			if ( isHeaderInteractive ) {
+
+				$header.addClass( 'vui-accordion-header-interactive' );
+
 				var toggle = document.createElement( 'div' );
 				toggle.className = 'vui-accordion-toggle';
 
