@@ -24,6 +24,12 @@
 	.gradient-vertical( #fcfcfc, #f8f8f8 );
 }
 
+.vui-accordion-header-active {
+	border-top: none;
+	border: 2px solid #99c9d5;
+	margin: 0 -1px;
+}
+
 .vui-accordion-header-interactive:hover,
 .vui-accordion-header-active.vui-accordion-header-interactive {
 	.gradient-vertical( #fafafa, #ededed );
@@ -38,22 +44,22 @@
 	display: none;
 }
 
+.vui-accordion-content-active {
+	border-top: none;
+}
+
 .vui-accordion-header:first-child {
 	border-top-width: 0;
 }
 
-.vui-accordion-panel-expanded {
-	.gradient-vertical( #ebf1f4, #d7e3e9 );
+.vui-accordion-header-active:first-child {
+	border-top-width: 2px;
+	margin-top: -1px;
 }
 
 .vui-accordion-header-active.vui-accordion-panel-expanded,
 .vui-accordion-panel-expanded:hover {
 	.gradient-vertical( #f7f9f9, #eff3f5 );
-}
-
-.vui-accordion-panel-expanded.vui-accordion-header-interactive:hover,
-.vui-accordion-header-active.vui-accordion-panel-expanded.vui-accordion-header-interactive {
-	.gradient-vertical( #ebf1f4, #d7e3e9 );
 }
 
 .vui-accordion-header-disabled,

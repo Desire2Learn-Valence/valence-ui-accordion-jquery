@@ -202,10 +202,12 @@
 				} ).focus( function() {
 
 					$header.addClass( 'vui-accordion-header-active' );
+					$content.addClass( 'vui-accordion-content-active' );
 
 				} ).blur( function() {
 
 					$header.removeClass( 'vui-accordion-header-active' );
+					$content.removeClass( 'vui-accordion-content-active' );
 
 				} ).keydown( function( e ) {
 
