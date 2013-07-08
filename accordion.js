@@ -1,5 +1,5 @@
 ﻿$( function() { 
-	$.widget( "vui.accordion", { 
+	$.widget( "vui.vui_accordion", { 
 
 		options: {},
 
@@ -96,7 +96,7 @@
 			var $accordion = $( this.element );
 
 			if ( this.option( 'displayMode' ) === 'accordion' ) {
-				$accordion.accordion( 'collapseAll' );
+				$accordion.vui_accordion( 'collapseAll' );
 			}
 
 			$accordion.trigger( 
@@ -393,7 +393,7 @@
 	vui.addClassInitializer(
 			'vui-accordion',
 			function( node ) {
-				$( node ).accordion();
+				$( node ).vui_accordion();
 			}
 		);
 
