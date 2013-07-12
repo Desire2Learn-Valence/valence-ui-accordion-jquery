@@ -87,6 +87,7 @@
 
 			$( contentNode )
 				.attr( 'aria-hidden', 'true' )
+				.attr( 'visibility', 'hidden' )
 				.slideUp(250,'swing');
 
 		},
@@ -121,6 +122,7 @@
 
 			$( contentNode )
 				.attr( 'aria-hidden', 'false' )
+				.attr( 'visibility', 'visibile' )
 				.slideDown(250,'swing');
 
 		},
@@ -153,6 +155,10 @@
 			};
 
 			var isEnabled = !$content.is( ':empty' );
+
+			if ( !isExpanded ) {
+				$content.attr( 'visibility', 'hidden' );
+			}
 
 			if ( isHeaderInteractive ) {
 
