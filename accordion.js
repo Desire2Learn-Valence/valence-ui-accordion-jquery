@@ -1,4 +1,5 @@
-﻿$( function() { 
+﻿(function( $ ) { 
+
 	$.widget( "vui.vui_accordion", { 
 
 		options: {},
@@ -403,4 +404,4 @@
 			}
 		);
 
-} );
+})( window.jQuery );
