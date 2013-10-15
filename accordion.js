@@ -1,6 +1,6 @@
-﻿(function( $ ) { 
+﻿(function( $ ) {
 
-	$.widget( "vui.vui_accordion", { 
+	$.widget( "vui.vui_accordion", {
 
 		options: {},
 
@@ -19,18 +19,18 @@
 
 			$accordion
 				.attr( 'role', 'tablist' )
-				.attr( 
-					'aria-multiselectable', 
-					displayMode !== 'accordion' 
+				.attr(
+					'aria-multiselectable',
+					displayMode !== 'accordion'
 				);
 
-			$.each( 
+			$.each(
 				$accordion.find( '.vui-accordion-header' ),
 				function( index, headerNode ) {
-					me._initializePanel( 
-						$accordion, 
-						$( headerNode ), 
-						( index === 0 ) 
+					me._initializePanel(
+						$accordion,
+						$( headerNode ),
+						( index === 0 )
 					);
 				}
 			);
@@ -53,7 +53,7 @@
 
 			var me = this;
 
-			$.each( 
+			$.each(
 				$( this.element ).find( '.vui-accordion-header' ),
 				function( index, headerNode ) {
 					me._collapsePanel( $( headerNode ) );
@@ -101,11 +101,11 @@
 				$accordion.vui_accordion( 'collapseAll' );
 			}
 
-			$accordion.trigger( 
-				'expandPanel', { 
+			$accordion.trigger(
+				'expandPanel', {
 					header: $header.get( 0 ),
 					isFirstExpand: !$header.data( 'hasExpanded' )
-				} 
+				}
 			);
 
 			$header.attr( 'aria-expanded', 'true' )
@@ -140,9 +140,9 @@
 			var contentId = $header.attr( 'data-content-id' );
 			var contentNode = $content.get( 0 );
 
-			var isExpanded = ( $header.attr( 'data-expanded' ) === 'true' );
+			var isExpanded = ( $header.attr( 'data-expanded' ) === 'true' ) && !$content.is( ':empty' );
 			var labelledById = $header.attr( 'data-content-labelledby' );
-			
+
 			var $headerContent = $header.find( '.vui-accordion-header-content:first-child' );
 
 			var isHeaderInteractive = ( $headerContent.length !== 0 );
@@ -156,6 +156,7 @@
 			};
 
 			var isEnabled = !$content.is( ':empty' );
+
 
 			if ( !isExpanded ) {
 				$content.attr( 'visibility', 'hidden' );
@@ -195,7 +196,7 @@
 
 					var eventTarget = e.target;
 
-					while ( eventTarget !== $header.get( 0 ) && eventTarget !== null ) { 
+					while ( eventTarget !== $header.get( 0 ) && eventTarget !== null ) {
 
 						if ( eventTarget === $headerContent.get( 0 ) || $( eventTarget ).is( ':focusable' ) ) {
 							return;
@@ -264,7 +265,7 @@
 			if ( isExpanded ) {
 
 				if ( this.option( 'displayMode' ) === 'accordion' ) {
-					$.each( 
+					$.each(
 						$accordion.find( '.vui-accordion-panel-expanded' ),
 						function( index, panelNode ) {
 							me._collapsePanel( $( panelNode ) );
@@ -275,11 +276,11 @@
 				$header.addClass( 'vui-accordion-panel-expanded' );
 
 				setTimeout( function() {
-					$accordion.trigger( 
-						'expandPanel', { 
+					$accordion.trigger(
+						'expandPanel', {
 							header: $header.get( 0 ),
 							isFirstExpand: true
-						} 
+						}
 					);
 				}, 0 );
 
