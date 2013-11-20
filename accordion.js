@@ -1,4 +1,6 @@
-﻿(function( $ ) {
+/*jslint browser: true*/
+
+(function( $, vui ) {
 
 	$.widget( "vui.vui_accordion", {
 
@@ -405,4 +407,4 @@
 			}
 		);
 
-})( window.jQuery );
+})( window.jQuery, window.vui );
