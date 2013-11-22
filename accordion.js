@@ -1,6 +1,6 @@
 /*jslint browser: true*/
 
-(function( $, vui ) {
+(function( vui ) {
 
 	// Check if the provided vui global is defined, otherwise try to require it if
 	// we're in a CommonJS environment; otherwise we'll just fail out
@@ -17,6 +17,8 @@
 	if( typeof module === 'object' && typeof module.exports === 'object' ) {
 		module.exports = vui;
 	}
+	
+	var $ = vui.$;
 
 	$.widget( "vui.vui_accordion", {
 
@@ -423,4 +425,4 @@
 			}
 		);
 
-})( window.jQuery, window.vui );
+})( window.vui );
