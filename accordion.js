@@ -191,9 +191,9 @@
 
 				var toggleIcon = toggle.appendChild( document.createElement( 'div' ) );
 				if ( isExpanded ) {
-					toggleIcon.className = 'vui-accordion-toggle-icon vui-icon-expanded';
+					toggleIcon.className = 'vui-accordion-toggle-icon vui-icon-accordion-expanded';
 				} else {
-					toggleIcon.className = 'vui-accordion-toggle-icon vui-icon-collapsed';
+					toggleIcon.className = 'vui-accordion-toggle-icon vui-icon-accordion-collapsed';
 				}
 
 				$header.prepend( toggle );
@@ -406,11 +406,11 @@
 			var toggleIcon = $header.find( '.vui-accordion-toggle-icon' );
 			if ( toggleIcon.length > 0 ) {
 				if ( isExpanded ) {
-					toggleIcon.addClass( 'vui-icon-expanded' );
-					toggleIcon.removeClass( 'vui-icon-collapsed' );
+					toggleIcon.addClass( 'vui-icon-accordion-expanded' );
+					toggleIcon.removeClass( 'vui-icon-accordion-collapsed' );
 				} else {
-					toggleIcon.addClass( 'vui-icon-collapsed' );
-					toggleIcon.removeClass( 'vui-icon-expanded' );
+					toggleIcon.addClass( 'vui-icon-accordion-collapsed' );
+					toggleIcon.removeClass( 'vui-icon-accordion-expanded' );
 				}
 			}
 
