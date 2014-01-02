@@ -57,6 +57,14 @@
 
 		},
 
+		_destroy: function () {
+			
+			var $accordion = $( this.element );
+			$accordion.removeAttr( 'role' );
+			$accordion.removeAttr( 'aria-multiselectable' );
+
+		},
+
 		_setOption: function( key, value ) {
 			if ( key === 'displayMode' ) {
 				if ( value === 'stacked' ) {
