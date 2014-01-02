@@ -58,10 +58,56 @@
 		},
 
 		_destroy: function () {
-			
+
 			var $accordion = $( this.element );
-			$accordion.removeAttr( 'role' );
-			$accordion.removeAttr( 'aria-multiselectable' );
+			
+			$accordion
+				.removeAttr( 'role' )
+				.removeAttr( 'aria-multiselectable' );
+
+			$.each(
+				$accordion.find( '.vui-accordion-toggle' ),
+				function( index, toggleNode ) {
+					$( toggleNode ).remove();
+				}
+			);
+
+			$.each(
+				$accordion.find( '.vui-accordion-header' ),
+				function( index, headerNode ) {
+					$( headerNode )
+						.removeAttr( 'role' )
+						.removeAttr( 'aria-controls' )
+						.removeAttr( 'aria-expanded' )
+						.removeAttr( 'aria-selected' )
+						.removeAttr( 'tabindex' )
+						.removeClass( 'vui-accordion-header-active' )
+						.removeClass( 'vui-accordion-header-interactive' )
+						.unbind( 'click' )
+						.unbind( 'focus' )
+						.unbind( 'blur' )
+						.unbind( 'keydown' )
+						.unbind( 'keyup' );
+				}
+			);
+
+			$.each(
+				$accordion.find( '.vui-accordion-content' ),
+				function( index, contentNode ) {
+
+					var $content = $( contentNode );
+					$content
+						.removeAttr( 'role' )
+						.removeAttr( 'aria-labelledby' )
+						.removeAttr( 'aria-hidden' )
+						.removeClass( 'vui-accordion-content-active' );
+
+					if ( $content.data( 'hasGeneratedId' ) ) {
+						$content.removeAttr( 'id' );
+					}
+
+				}
+			);
 
 		},
 
@@ -366,7 +412,10 @@
 
 				contentId = $nextElement.attr( 'id' );
 				if ( contentId === undefined ) {
-					$nextElement.uniqueId();
+					
+					$nextElement.uniqueId()
+						.data( 'hasGeneratedId', true );
+
 					contentId = $nextElement.attr( 'id' );
 				}
 
