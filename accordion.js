@@ -158,7 +158,6 @@
 			}
 
 			var contentId = $header.attr( 'data-content-id' );
-			var contentNode = $content.get( 0 );
 
 			var isExpanded = ( $header.attr( 'data-expanded' ) === 'true' ) && !$content.is( ':empty' );
 			var labelledById = $header.attr( 'data-content-labelledby' );
