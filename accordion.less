@@ -58,13 +58,21 @@
 }
 
 .vui-accordion-header-active:first-child {
-	.border-radius-custom( 3px, 0, 0, 3px );
+	background-clip: padding-box; 
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	border-top-left-radius: 3px;
 	border-top-width: 2px;
 	margin-top: -1px;
 }
 
 .vui-accordion-header-active:nth-last-child(2) {
-	.border-radius-custom( 0, 3px, 3px, 0 );
+	background-clip: padding-box; 
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	border-top-left-radius: 0;
 	border-bottom-width: 2px;
 	margin-bottom: -1px;
 	padding: 9px;
