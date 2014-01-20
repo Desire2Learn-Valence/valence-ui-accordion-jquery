@@ -7,7 +7,7 @@
 
 .vui-accordion-header {
 	.gradient-vertical( #fafafa, #ededed );
-	.box-shadow-inset( 0, 1px, 0, 0, rgba(255,255,255,0.8) );
+	box-shadow: 0 1px 0 0 rgba(255,255,255,0.8) inset;
 	border-top: 1px solid #cfcfcf;
 	padding: 10px;
 	cursor: pointer;
@@ -40,7 +40,7 @@
 }
 
 .vui-accordion-content {
-	.box-shadow-custom( ~'0 5px 5px -5px rgba(0,0,0,0.1) inset, 0 -5px 5px -5px rgba(0,0,0,0.1) inset' );
+	box-shadow: 0 5px 5px -5px rgba(0,0,0,0.1) inset, 0 -5px 5px -5px rgba(0,0,0,0.1) inset;
 	overflow: auto;
 	border-top: 1px solid #cfcfcf;
 	background-color: #fcfcfc;
@@ -109,7 +109,7 @@
 	background-color: #fafafa;
 	border-color: #cccccc;
 	.gradient-vertical( #f8f8f8, #f2f2f2 );
-	.box-shadow-inset( 0, 1px, 0, 0, #ffffff );
+	box-shadow: 0 1px 0 0 #ffffff inset;
 }
 
 .vui-icon-accordion-collapsed:before {
