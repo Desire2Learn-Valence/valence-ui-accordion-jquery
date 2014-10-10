@@ -1,10 +1,24 @@
-@import '../../core/core';
 
-.vui-accordion {
-	border-radius: 3px;
-	border: 1px solid #cfcfcf;
+@vui-accordionBorderWidth: 1px;
+@vui-accordionBorderColor: #cfcfcf;
+@vui-accordionBorderStyle: solid;
+@vui-accordionBorderRadius: 3px;
+
+#vui {
+
+	.accordion( 
+			@borderWidth: @vui-accordionBorderWidth,
+			@borderColor: @vui-accordionBorderColor,
+			@borderStyle: @vui-accordionBorderStyle,
+			@borderRadius: @vui-accordionBorderRadius
+		) {
+		border-radius: @borderRadius;
+		border: @borderWidth @borderStyle @borderColor;
+	}
+
 }
 
+/*
 .vui-accordion-header {
 	.gradient-vertical( #fafafa, #ededed );
 	box-shadow: 0 1px 0 0 rgba(255,255,255,0.8) inset;
@@ -134,3 +148,4 @@
 [dir='rtl'] .vui-icon-accordion-collapsed:before {
 	content: data-uri('image/png;base64','controls/accordion/collapsed_rtl.png');
 }
+*/
