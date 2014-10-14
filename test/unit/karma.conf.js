@@ -17,6 +17,9 @@ module.exports = function( config ) {
 			outputFile: 'test/output/unit.xml',
 			suite: 'unit'
 		},
+		preprocessors: {
+			'accordion.js': ['coverage']
+		},
 		plugins : [
 			'karma-chrome-launcher',
 			'karma-coverage',
