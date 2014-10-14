@@ -1,9 +1,9 @@
 var gulp = require( 'gulp' ),
+	del = require( 'del' ),
 	vui = require( 'vui-helpers' );
 
-gulp.task( 'clean', function() {
-	return gulp.src( [ 'accordion.css' ], { read: false } )
-		.pipe( vui.clean() );
+gulp.task( 'clean', function( cb ) {
+	del([ 'accordion.css' ], cb);
 } );
 
 gulp.task( 'css', function () {
