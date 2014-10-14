@@ -9,7 +9,8 @@ gulp.task( 'clean', function() {
 gulp.task( 'css', function () {
 	return vui.makeCss(
 		'accordion.css.less',
-		'accordion.css'
+		'accordion.css',
+		{ 'lintOpts' : '.csslintrc' }
 	);
 } );
 
