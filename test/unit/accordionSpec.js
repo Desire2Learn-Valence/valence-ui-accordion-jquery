@@ -3,7 +3,7 @@
 
 	describe( 'vui', function() {
 
-		var node, heading;
+		var node;
 
 		beforeEach( function () {
 			jasmine.addMatchers( d2l.jasmine.matchers );
