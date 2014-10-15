@@ -24,15 +24,17 @@ gulp.task( 'default', [ 'clean' ], function() {
 } );
 
 gulp.task( 'test', [ 'lib' ], function () {
-	return vui.test(
-			'test/unit/karma.conf.js',
-			[
-				'lib/jquery/jquery.min.js',
-				'lib/jquery.ui/ui/jquery.ui.core.js',
-				'lib//jquery.ui/ui/jquery.ui.widget.js',
-				'accordion.js',
-				'test/unit/**/*Spec.js'
-			],
+	return vui.test( {
+		files: [
+			'lib/jquery/jquery.min.js',
+			'lib/jquery.ui/ui/jquery.ui.core.js',
+			'lib//jquery.ui/ui/jquery.ui.widget.js',
+			'accordion.js',
+			'test/unit/**/*Spec.js',
 			'accordion.css'
-		);
+		],
+		preprocessors: {
+			'accordion.js': ['coverage']
+		}
+	} ) ;
 } );

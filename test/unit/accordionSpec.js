@@ -15,7 +15,7 @@
 			document.body.removeChild( node );
 		} );
 
-		describe( 'accordion', function() { 
+		describe( 'accordion', function() {
 
 			var accordion, header1, heading1, content1;
 
