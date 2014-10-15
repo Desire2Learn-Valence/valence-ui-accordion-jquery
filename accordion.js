@@ -44,7 +44,7 @@
 		_destroy: function () {
 
 			var $accordion = $( this.element );
-			
+
 			$accordion
 				.removeAttr( 'role' )
 				.removeAttr( 'aria-multiselectable' );
@@ -396,7 +396,7 @@
 
 				contentId = $nextElement.attr( 'id' );
 				if ( contentId === undefined ) {
-					
+
 					$nextElement.uniqueId()
 						.data( 'hasGeneratedId', true );
 
