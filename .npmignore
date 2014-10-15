@@ -7,3 +7,4 @@ node_modules
 test
 gulpfile.js
 accordion.css.less
+bower.json
