@@ -1,6 +1,7 @@
 #VUI Accordion (jQuery widget)
 [![NPM version][npm-image]][npm-url]
 [![Build status][ci-image]][ci-url]
+[![Coverage Status][coverage-image]][coverage-url]
 
 jQuery-based accordion widget.
 
@@ -30,3 +31,5 @@ This repository is configured with [EditorConfig](http://editorconfig.org) rules
 [npm-image]: https://badge.fury.io/js/vui-accordion-jquery.png
 [ci-image]: https://travis-ci.org/Desire2Learn-Valence/valence-ui-accordion-jquery.svg?branch=master
 [ci-url]: https://travis-ci.org/Desire2Learn-Valence/valence-ui-accordion-jquery
+[coverage-image]: https://coveralls.io/repos/Desire2Learn-Valence/valence-ui-accordion-jquery/badge.png?branch=master
+[coverage-url]: https://coveralls.io/r/Desire2Learn-Valence/valence-ui-accordion-jquery?branch=master
