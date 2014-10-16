@@ -1,14 +1,15 @@
-var gulp = require( 'gulp' ),
-	bower = require( 'gulp-bower' ),
-	del = require( 'del' ),
-	vui = require( 'vui-helpers' );
+var bower = require('gulp-bower'),
+	del = require('del'),
+	gulp = require('gulp'),
+	jshint = require('gulp-jshint'),
+	vui = require('vui-helpers');
 
 gulp.task( 'clean', function( cb ) {
-	del([ 'accordion.css' ], cb);
+	del( [ 'accordion.css' ], cb );
 } );
 
 gulp.task( 'lib', function() {
-	return bower( 'lib/' );
+	return bower('lib/');
 } );
 
 gulp.task( 'css', function () {
@@ -19,8 +20,10 @@ gulp.task( 'css', function () {
 	);
 } );
 
-gulp.task( 'default', [ 'clean' ], function() {
-	gulp.start( 'css' );
+gulp.task( 'jshint', function() {
+	return gulp.src( ['gulpfile.js', 'accordion.js', 'test/unit/*.js'] )
+		.pipe( jshint() )
+		.pipe( jshint.reporter('default') );
 } );
 
 gulp.task( 'test', [ 'lib' ], function () {
@@ -37,4 +40,8 @@ gulp.task( 'test', [ 'lib' ], function () {
 			'accordion.js': ['coverage']
 		}
 	} ) ;
+} );
+
+gulp.task( 'default', [ 'clean' ], function() {
+	gulp.start( 'css', 'jshint' );
 } );
