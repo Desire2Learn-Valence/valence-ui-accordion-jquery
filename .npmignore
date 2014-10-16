@@ -2,6 +2,7 @@
 .gitattributes
 .gitignore
 .npmignore
+.travis.yml
 lib
 node_modules
 test
