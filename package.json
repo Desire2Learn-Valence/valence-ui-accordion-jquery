@@ -1,5 +1,5 @@
 {
-  "name": "vui-jquery-accordion",
+  "name": "vui-accordion-jquery",
   "description": "jQuery-based accordion widget",
   "version": "0.0.1",
   "author": "D2L Corporation",
@@ -24,6 +24,8 @@
     "d2l",
     "valence-ui",
     "vui",
-    "accordion"
+    "accordion",
+    "jquery",
+    "widget"
   ]
 }
