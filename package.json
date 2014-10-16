@@ -1,7 +1,7 @@
 {
   "name": "vui-jquery-accordion",
-  "description": "JQuery widget for behavior, LESS mixins and CSS for to apply styles",
-  "version": "0.0.0",
+  "description": "jQuery-based accordion widget",
+  "version": "0.0.1",
   "author": "D2L Corporation",
   "license": "Apache-2.0",
   "repository": {
@@ -23,6 +23,7 @@
   "keywords": [
     "d2l",
     "valence-ui",
-    "vui"
+    "vui",
+    "accordion"
   ]
 }
