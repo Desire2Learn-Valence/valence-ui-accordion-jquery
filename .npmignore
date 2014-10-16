@@ -1,4 +1,5 @@
 .csslintrc
+.editorconfig
 .gitattributes
 .gitignore
 .npmignore
