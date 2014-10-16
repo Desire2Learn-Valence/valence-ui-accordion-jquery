@@ -1,4 +1,5 @@
 var bower = require('gulp-bower'),
+	coveralls = require('gulp-coveralls'),
 	del = require('del'),
 	gulp = require('gulp'),
 	jshint = require('gulp-jshint'),
@@ -26,6 +27,11 @@ gulp.task( 'jshint', function() {
 		.pipe( jshint.reporter('default') );
 } );
 
+gulp.task( 'coverage', function() {
+	return gulp.src( 'test/output/coverage/**/lcov.info' )
+		.pipe( coveralls() );
+} );
+
 gulp.task( 'test', [ 'lib' ], function () {
 	return vui.test( {
 		files: [
@@ -38,6 +44,9 @@ gulp.task( 'test', [ 'lib' ], function () {
 		],
 		preprocessors: {
 			'accordion.js': ['coverage']
+		},
+		coverageReporter: {
+			type: 'lcov', dir: 'test/output/coverage/'
 		}
 	} ) ;
 } );
