@@ -37,7 +37,7 @@ gulp.task( 'test', [ 'lib' ], function () {
 		files: [
 			'lib/jquery/jquery.min.js',
 			'lib/jquery.ui/ui/jquery.ui.core.js',
-			'lib//jquery.ui/ui/jquery.ui.widget.js',
+			'lib/jquery.ui/ui/jquery.ui.widget.js',
 			'accordion.js',
 			'test/unit/**/*Spec.js',
 			'accordion.css'
