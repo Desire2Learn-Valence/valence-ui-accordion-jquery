@@ -35,7 +35,7 @@
 			// turn off jquery fx since they will can introduce timing issues when making our expectations
 			$.fx.off = true;
 
-			jasmine.addMatchers( d2l.jasmine.matchers );
+			jasmine.addMatchers( vui.jasmine.dom.matchers );
 
 			node = document.body.appendChild( document.createElement( 'div' ) );
 			node.className = 'vui-accordion';
