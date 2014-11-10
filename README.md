@@ -7,7 +7,7 @@ A jQuery-based accordion widget.
 
 This repository is configured with [EditorConfig](http://editorconfig.org) rules
 and contributions should make use of them. See the valence-ui [Code Style wiki
-page](https://github.com/Desire2Learn-Valence/valence-ui-helpers/wiki/Code-Style)
+page](https://github.com/Brightspace/valence-ui-helpers/wiki/Code-Style)
 for details.
 
 [npm-url]: https://npmjs.org/package/vui-accordion-jquery
