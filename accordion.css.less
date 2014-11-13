@@ -3,21 +3,21 @@
 
 .vui-accordion {
 	border-radius: @vui-accordion-borderRadius;
-	border: 
-		@vui-accordion-borderWidth 
-		@vui-accordion-borderStyle 
+	border:
+		@vui-accordion-borderWidth
+		@vui-accordion-borderStyle
 		@vui-accordion-borderColor;
 }
 
 .vui-accordion-header {
-	#vui.gradient-vertical( 
-			@vui-accordion-header-backgroundColorStart, 
-			@vui-accordion-header-backgroundColorEnd 
+	#vui.gradient-vertical(
+			@vui-accordion-header-backgroundColorStart,
+			@vui-accordion-header-backgroundColorEnd
 		);
 	box-shadow: @vui-accordion-header-boxShadow;
 	border-top:
-		@vui-accordion-borderWidth 
-		@vui-accordion-borderStyle 
+		@vui-accordion-borderWidth
+		@vui-accordion-borderStyle
 		@vui-accordion-borderColor;
 	padding: 10px;
 	cursor: pointer;
@@ -30,18 +30,18 @@
 }
 
 .vui-accordion-header:hover {
-	#vui.gradient-vertical( 
-			@vui-accordion-header-backgroundColorStart-hover, 
-			@vui-accordion-header-backgroundColorEnd-hover 
+	#vui.gradient-vertical(
+			@vui-accordion-header-backgroundColorStart-hover,
+			@vui-accordion-header-backgroundColorEnd-hover
 		);
 }
 
 .vui-accordion-header-active {
 	border-top: none;
-	border: 
-		@vui-accordion-activeHeader-borderWidth 
-		@vui-accordion-activeHeader-borderStyle 
-		@vui-accordion-activeHeader-borderColor;
+	border:
+		@vui-accordion-header-borderWidth-active
+		@vui-accordion-header-borderStyle-active
+		@vui-accordion-header-borderColor-active;
 	margin: 0 -1px;
 	padding: 9px 9px 8px 9px;
 }
@@ -53,17 +53,17 @@
 
 .vui-accordion-header-interactive:hover {
 	#vui.gradient-vertical(
-			@vui-accordion-interactiveHeader-backgroundColorStart-hover, 
-			@vui-accordion-interactiveHeader-backgroundColorEnd-hover 
+			@vui-accordion-interactiveHeader-backgroundColorStart-hover,
+			@vui-accordion-interactiveHeader-backgroundColorEnd-hover
 		);
 }
 
 .vui-accordion-content {
 	box-shadow: @vui-accordion-content-boxShadow;
 	overflow: auto;
-	border-top: 
-		@vui-accordion-borderWidth 
-		@vui-accordion-borderStyle 
+	border-top:
+		@vui-accordion-borderWidth
+		@vui-accordion-borderStyle
 		@vui-accordion-borderColor;
 	background-color: @vui-accordion-content-backgroundColor;
 	padding: 10px;
@@ -80,7 +80,7 @@
 }
 
 .vui-accordion-header-active:first-child {
-	background-clip: padding-box; 
+	background-clip: padding-box;
 	border-top-right-radius: @vui-accordion-borderRadius;
 	border-bottom-right-radius: 0;
 	border-bottom-left-radius: 0;
@@ -90,7 +90,7 @@
 }
 
 .vui-accordion-header-active:nth-last-child(2) {
-	background-clip: padding-box; 
+	background-clip: padding-box;
 	border-top-right-radius: 0;
 	border-bottom-right-radius: @vui-accordion-borderRadius;
 	border-bottom-left-radius: @vui-accordion-borderRadius;
@@ -108,16 +108,16 @@
 
 .vui-accordion-header-disabled,
 .vui-accordion-header-disabled:hover {
-	background: @vui-accordion-disabledHeader-backgroundColor;
-	opacity: @vui-accordion-disabledHeader-opacity;
+	background: @vui-accordion-header-backgroundColor-disabled;
+	opacity: @vui-accordion-header-opacity-disabled;
 	cursor: default;
 }
 
 .vui-accordion-toggle {
 	border-radius: @vui-accordion-borderRadius;
-	border: 
-		@vui-accordion-toggle-borderWidth 
-		@vui-accordion-toggle-borderStyle 
+	border:
+		@vui-accordion-toggle-borderWidth
+		@vui-accordion-toggle-borderStyle
 		@vui-accordion-toggle-borderColor;
 	position: relative;
 	float: left;
@@ -133,9 +133,9 @@
 .vui-accordion-header:hover > .vui-accordion-toggle {
 	background-color: @vui-accordion-toggle-backgroundColor-hover;
 	border-color: @vui-accordion-toggle-borderColor-hover;
-	#vui.gradient-vertical( 
-			@vui-accordion-toggle-backgroundColorStart-hover, 
-			@vui-accordion-toggle-backgroundColorEnd-hover 
+	#vui.gradient-vertical(
+			@vui-accordion-toggle-backgroundColorStart-hover,
+			@vui-accordion-toggle-backgroundColorEnd-hover
 		);
 	box-shadow: @vui-accordion-toggle-boxShadow-hover;
 }
