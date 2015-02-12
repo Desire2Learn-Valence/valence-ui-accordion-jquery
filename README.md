@@ -1,4 +1,4 @@
-#VUI Accordion (jQuery widget)
+# vui-accordion-jquery
 [![NPM version][npm-image]][npm-url]
 [![Build status][ci-image]][ci-url]
 [![Coverage Status][coverage-image]][coverage-url]
