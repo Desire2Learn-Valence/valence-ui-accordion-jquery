@@ -10,7 +10,7 @@ See the [VUI Best Practices & Style Guide](https://github.com/Brightspace/valenc
 
 [npm-url]: https://npmjs.org/package/vui-accordion-jquery
 [npm-image]: https://img.shields.io/npm/v/vui-accordion-jquery.svg
-[ci-image]: https://travis-ci.org/Brightspace/valence-ui-accordion-jquery.svg?branch=master
-[ci-url]: https://travis-ci.org/Brightspace/valence-ui-accordion-jquery
+[ci-image]: https://travis-ci.org/Brightspace/jquery-valence-ui-accordion.svg?branch=master
+[ci-url]: https://travis-ci.org/Brightspace/jquery-valence-ui-accordion
 [coverage-image]: https://img.shields.io/coveralls/Brightspace/valence-ui-accordion-jquery.svg
 [coverage-url]: https://coveralls.io/r/Brightspace/valence-ui-accordion-jquery?branch=master
