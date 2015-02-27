@@ -1,12 +1,12 @@
 {
-  "name": "vui-accordion-jquery",
+  "name": "jquery-vui-accordion",
   "description": "jQuery-based accordion widget",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "author": "D2L Corporation",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Brightspace/valence-ui-accordion-jquery.git"
+    "url": "https://github.com/Brightspace/jquery-valence-ui-accordion.git"
   },
   "scripts": {
     "test": "gulp && gulp test"
