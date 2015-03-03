@@ -1,4 +1,4 @@
-# vui-accordion-jquery
+# jquery-vui-accordion
 [![NPM version][npm-image]][npm-url]
 [![Build status][ci-image]][ci-url]
 [![Coverage Status][coverage-image]][coverage-url]
