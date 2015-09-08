@@ -1,6 +1,4 @@
-deplui.sublime-project
-deplui.sublime-workspace
-lib/
+bower_components/
 node_modules/
 test/output
 accordion.css
