@@ -1,12 +1,10 @@
-.csslintrc
+bower_components
+node_modules
+test
 .editorconfig
 .gitattributes
 .gitignore
 .npmignore
 .travis.yml
-lib
-node_modules
-test
 gulpfile.js
-accordion.css.less
-bower.json
+postcss.config.json
