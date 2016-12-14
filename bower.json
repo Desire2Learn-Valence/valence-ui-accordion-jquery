@@ -2,18 +2,19 @@
   "name": "jquery-vui-accordion",
   "license": "Apache-2.0",
   "ignore": [
-      "test",
-      ".editorconfig",
-      ".gitattributes",
-      ".gitignore",
-      ".npmignore",
-      ".travis.yml",
-      "gulpfile.js",
-      "package.json",
-      "postcss.config.json"
+    "test",
+    ".editorconfig",
+    ".gitattributes",
+    ".gitignore",
+    ".npmignore",
+    ".travis.yml",
+    "gulpfile.js",
+    "package.json",
+    "postcss.config.json"
   ],
   "dependencies": {
-      "vui-gradient": "~0.3.2"
+    "vui-gradient": "~0.3.2",
+    "d2l-colors": "^2.2.3"
   },
   "devDependencies": {
     "jquery": "~2.0.3",
