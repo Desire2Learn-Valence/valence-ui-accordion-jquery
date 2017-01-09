@@ -11,16 +11,12 @@
 }
 
 .vui-accordion-header {
-	@include gradient-vertical(
-			$vui-accordion-header-backgroundColorStart,
-			$vui-accordion-header-backgroundColorEnd
-		);
-	box-shadow: $vui-accordion-header-boxShadow;
+	background-color: $vui-accordion-header-backgroundColor;
 	border-top:
 		$vui-accordion-borderWidth
 		$vui-accordion-borderStyle
 		$vui-accordion-borderColor;
-	padding: 10px;
+	padding: 15px;
 	cursor: pointer;
 }
 
@@ -31,10 +27,7 @@
 }
 
 .vui-accordion-header:hover {
-	@include gradient-vertical(
-			$vui-accordion-header-backgroundColorStart-hover,
-			$vui-accordion-header-backgroundColorEnd-hover
-		);
+	background-color: $vui-accordion-toggle-backgroundColor-hover;
 }
 
 .vui-accordion-header-active {
@@ -44,40 +37,40 @@
 		$vui-accordion-header-borderStyle-active
 		$vui-accordion-header-borderColor-active;
 	margin: 0 -1px;
-	padding: 9px 9px 8px 9px;
+	padding: 15px;
 }
 
 .vui-accordion-header-active + div[visibility="hidden"] + .vui-accordion-header {
 	border-top: none;
-	padding: 11px 10px 10px 10px;
+	padding: 15px;
 }
 
 .vui-accordion-header-interactive:hover {
-	@include gradient-vertical(
-			$vui-accordion-interactiveHeader-backgroundColorStart-hover,
-			$vui-accordion-interactiveHeader-backgroundColorEnd-hover
-		);
+	background-color: $vui-accordion-toggle-backgroundColor-hover;
 }
 
 .vui-accordion-content {
-	box-shadow: $vui-accordion-content-boxShadow;
 	overflow: auto;
 	border-top:
 		$vui-accordion-borderWidth
 		$vui-accordion-borderStyle
 		$vui-accordion-borderColor;
 	background-color: $vui-accordion-content-backgroundColor;
-	padding: 10px;
+	padding: 15px;
 	display: none;
 }
 
 .vui-accordion-content-active {
 	border-top: none;
-	padding: 11px 10px 10px 10px;
+	padding: 15px;
 }
 
 .vui-accordion-header:first-child {
 	border-top-width: 0;
+	border-top-right-radius: $vui-accordion-borderRadius;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	border-top-left-radius: $vui-accordion-borderRadius;
 }
 
 .vui-accordion-header-active:first-child {
@@ -86,7 +79,7 @@
 	border-bottom-right-radius: 0;
 	border-bottom-left-radius: 0;
 	border-top-left-radius: $vui-accordion-borderRadius;
-	border-top-width: 2px;
+	border-top-width: $vui-accordion-borderWidth;
 	margin-top: -1px;
 }
 
@@ -96,15 +89,26 @@
 	border-bottom-right-radius: $vui-accordion-borderRadius;
 	border-bottom-left-radius: $vui-accordion-borderRadius;
 	border-top-left-radius: 0;
-	border-bottom-width: 2px;
+	border-bottom-width: $vui-accordion-borderWidth;
 	margin-bottom: -1px;
-	padding: 9px;
+	padding: 15px;
 }
 
 .vui-accordion-header-active.vui-accordion-panel-expanded:nth-last-child(2) {
-	border-radius: 0;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: $vui-accordion-borderRadius;
+	border-bottom-left-radius: $vui-accordion-borderRadius;
+	border-top-left-radius: 0;
 	margin-bottom: 0;
-	padding: 9px 9px 8px 9px;
+	padding: 15px;
+}
+
+.vui-accordion-header:nth-last-child(2),
+.vui-accordion-header.vui-accordion-panel-expanded:nth-last-child(2)+.vui-accordion-content {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: $vui-accordion-borderRadius;
+	border-bottom-left-radius: $vui-accordion-borderRadius;
+	border-top-left-radius: 0;
 }
 
 .vui-accordion-header-disabled,
@@ -134,11 +138,6 @@
 .vui-accordion-header:hover > .vui-accordion-toggle {
 	background-color: $vui-accordion-toggle-backgroundColor-hover;
 	border-color: $vui-accordion-toggle-borderColor-hover;
-	@include gradient-vertical(
-			$vui-accordion-toggle-backgroundColorStart-hover,
-			$vui-accordion-toggle-backgroundColorEnd-hover
-		);
-	box-shadow: $vui-accordion-toggle-boxShadow-hover;
 }
 
 .vui-icon-accordion-collapsed:before {
