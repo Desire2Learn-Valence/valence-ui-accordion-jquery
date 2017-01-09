@@ -1,34 +1,25 @@
 @import 'bower_components/d2l-colors/d2l-colors.scss';
 
 $vui-accordion-borderColor: $d2l-color-titanius;
-$vui-accordion-borderRadius: 3px;
+$vui-accordion-borderRadius: 6px;
 $vui-accordion-borderStyle: solid;
 $vui-accordion-borderWidth: 1px;
 
 $vui-accordion-header-borderColor-active: $d2l-color-titanius;
 $vui-accordion-header-borderStyle-active: solid;
-$vui-accordion-header-borderWidth-active: 2px;
+$vui-accordion-header-borderWidth-active: 1px;
 
-$vui-accordion-content-backgroundColor: $d2l-color-regolith;
-$vui-accordion-content-boxShadow: 0 5px 5px -5px rgba(0,0,0,0.1) inset, 0 -5px 5px -5px rgba(0,0,0,0.1) inset;
+$vui-accordion-content-backgroundColor: $d2l-color-white;
 
-$vui-accordion-header-backgroundColor-disabled: $d2l-color-woolonardo;
+$vui-accordion-header-backgroundColor-disabled: $d2l-color-regolith;
 $vui-accordion-header-opacity-disabled: 0.6;
 
-$vui-accordion-header-backgroundColorStart: $d2l-color-woolonardo;
-$vui-accordion-header-backgroundColorEnd: $d2l-color-woolonardo;
-$vui-accordion-header-backgroundColorStart-hover: $d2l-color-gypsum;
-$vui-accordion-header-backgroundColorEnd-hover: $d2l-color-gypsum;
-$vui-accordion-header-boxShadow: 0 1px 0 0 rgba( 255,255,255,0.8 ) inset;
-
-$vui-accordion-interactiveHeader-backgroundColorStart-hover: $d2l-color-gypsum;
-$vui-accordion-interactiveHeader-backgroundColorEnd-hover: $d2l-color-gypsum;
+$vui-accordion-header-backgroundColor: $d2l-color-regolith;
+$vui-accordion-header-backgroundColorStart: $d2l-color-regolith;
+$vui-accordion-header-backgroundColorEnd: $d2l-color-regolith;
 
 $vui-accordion-toggle-backgroundColor-hover: $d2l-color-gypsum;
-$vui-accordion-toggle-backgroundColorStart-hover: $d2l-color-gypsum;
-$vui-accordion-toggle-backgroundColorEnd-hover: $d2l-color-gypsum;
 $vui-accordion-toggle-borderColor: transparent;
 $vui-accordion-toggle-borderColor-hover: $d2l-color-titanius;
 $vui-accordion-toggle-borderStyle: solid;
 $vui-accordion-toggle-borderWidth: 1px;
-$vui-accordion-toggle-boxShadow-hover: 0 1px 0 0 $d2l-color-white inset;
