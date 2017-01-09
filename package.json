@@ -1,7 +1,7 @@
 {
   "name": "jquery-vui-accordion",
   "description": "jQuery-based accordion widget",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "author": "D2L Corporation",
   "license": "Apache-2.0",
   "repository": {
