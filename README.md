@@ -1,3 +1,6 @@
+> Deprecated: no longer supported.
+
+
 # jquery-vui-accordion
 [![NPM version][npm-image]][npm-url]
 [![Build status][ci-image]][ci-url]
