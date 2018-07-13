@@ -1,13 +1,14 @@
 language: node_js
 node_js:
-- '0.12'
+  - '0.12'
 sudo: false
 after_success:
-- gulp coverage
+  - gulp coverage
 deploy:
   provider: npm
   email: d2ltravisdeploy@d2l.com
   api_key:
-    secure: hN0LuefEnbSYTLDgCWRLq2H9e4sQ+rDcSthPUoyOVPMp16WDccFKGXm9uIFLQ3GrNr4aDBoEGXRSfdC5KJsDrqeoJtU0za+Xpm3U+pzOYJeqwo+1N1bd+GiCtxI75pbbGCdGhl75WKLUTpR2pf5hddzRKxbohW61xGF0FRXhRXc=
+    # d2l-travis-deploy: 8660......1b53
+    secure: iCRiG/ZNnWjKz1E3oV87GYvH6ns6HtBzFNvWXz6T+7ZT28kYEu1Fy61FpCgwrjLOvW5kyJLgY0qSSAxLdPBE2/ipyJtSUVK++VEj1ahNO5AiBDCv4GOxv7vC+Q/Z3KjaqVmfef7SuPyN+2kYTlgFrcVXMf1QGBeD3rWE/bMq5sM=
   on:
     tags: true
